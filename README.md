@@ -78,7 +78,7 @@ After=network.target
 
 [Service]
 User=philipp
-WorkingDirectory=/home/philipp/bedrock
+WorkingDirectory=/home/yourname/bedrock
 ExecStart=/bin/bash -c 'LD_LIBRARY_PATH=. ./bedrock_server'
 Restart=always
 RestartSec=5
@@ -98,7 +98,7 @@ After=network.target
 
 [Service]
 User=philipp
-WorkingDirectory=/home/philipp/bedrock-survival
+WorkingDirectory=/home/yourname/bedrock-survival
 ExecStart=/bin/bash -c 'LD_LIBRARY_PATH=. ./bedrock_server'
 Restart=always
 RestartSec=5
@@ -148,7 +148,7 @@ LD_LIBRARY_PATH=. ./bedrock_server
 ```
 Dann in der Konsole:
 ```text
-op MaxPower3309
+op yourgamertag
 ```
 
 ## 2.2 Wichtige Ingame Commands
