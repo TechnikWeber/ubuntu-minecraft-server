@@ -1,6 +1,6 @@
 # Minecraft Bedrock Server – Complete README (Ubuntu 24.04)
 
-Setup für 2 Server (Creative Lobby + Survival) auf Linux inkl. Autostart, Backup, Updates & Verwaltung.
+Setup für 2 Server (Creative + Survival) parallel auf Linux inkl. Autostart, Backup, Updates & Verwaltung.
 
 ---
 
@@ -86,7 +86,7 @@ After=network.target
 
 [Service]
 User=philipp
-WorkingDirectory=/home/philipp/bedrock-creative
+WorkingDirectory=/home/YOURNAME/bedrock-creative
 ExecStart=/bin/bash -c 'LD_LIBRARY_PATH=. ./bedrock_server'
 Restart=always
 RestartSec=5
@@ -135,7 +135,7 @@ journalctl -u bedrock-survival -f
 
 ## 2.1 OP Rechte
 ```text
-op MaxPower3309
+op YOURGAMETAG
 ```
 
 ---
@@ -305,13 +305,4 @@ http://SERVER-IP:19999
 pip3 install mcstatus
 mcstatus 127.0.0.1 status
 ```
-
----
-
-# WICHTIG
-Backup + Update sind beide notwendig.
-
----
-
-# FERTIG 🚀
 
