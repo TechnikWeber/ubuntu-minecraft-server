@@ -133,7 +133,7 @@ journalctl -u bedrock-survival -f
 
 # 2. MINECRAFT VERWALTUNG
 
-## 2.1 OP Rechte
+## 2.1 OP Rechte (Spieler muss verbunden sein!)
 ```text
 op YOURGAMETAG
 ```
@@ -246,17 +246,17 @@ nano ~/backup.sh
 DATE=$(date +%F-%H%M)
 systemctl stop bedrock-creative
 systemctl stop bedrock-survival
-tar -czf /home/philipp/backup-$DATE.tar.gz /home/philipp/bedrock-creative /home/philipp/bedrock-survival
+tar -czf /home/YOURNAME/backup-$DATE.tar.gz /home/philipp/bedrock-creative /home/philipp/bedrock-survival
 systemctl start bedrock-creative
 systemctl start bedrock-survival
-find /home/philipp -name "backup-*.tar.gz" -mtime +7 -delete
+find /home/YOURNAME -name "backup-*.tar.gz" -mtime +7 -delete
 ```
 ```bash
 chmod +x ~/backup.sh
 crontab -e
 ```
 ```cron
-0 3 * * * /home/philipp/backup.sh
+0 3 * * * /home/YOURNAME/backup.sh
 ```
 
 ---
